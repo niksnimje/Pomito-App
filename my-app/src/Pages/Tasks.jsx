@@ -15,7 +15,7 @@ function Tasks() {
   const { theme } = useContext(ThemeContext);
 
   const getData = () => {
-    axios.get("http://localhost:8080/tasks/get")
+    axios.get("https://pomito-app-be.onrender.com/tasks/get")
       .then((res) => {
         setData(res.data.tasks || []);
       })

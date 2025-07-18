@@ -12,7 +12,7 @@ function Login() {
     try {
       const result = await signInWithPopup(auth, provider);
       
-      await axios.post("http://localhost:8080/user/create", {
+      await axios.post("https://pomito-app-be.onrender.com/user/create", {
         name: result.user.displayName,
         email: result.user.email,
         photo: result.user.photoURL,
